@@ -13,14 +13,46 @@
       line-height: 1.6;
     }
 
+    /* ✅ UPDATED HEADER */
     header {
       background-color: #f4f4f4;
+      border-bottom: 5px solid #1f3a5f;
+    }
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
       padding: 20px;
-      border-bottom: 3px solid #1f3a5f;
+    }
+
+    .logo {
+      width: 100px;
+      height: auto;
+    }
+
+    .title h1 {
+      margin: 0;
+      font-size: 20px;
+      color: #b59b6a;
+      font-weight: normal;
+    }
+
+    .title h2 {
+      margin: 0;
+      font-size: 22px;
+      color: #1f3a5f;
+    }
+
+    nav {
+      text-align: center;
+      padding: 10px 0;
+      border-top: 1px solid #ccc;
     }
 
     nav a {
-      margin: 0 10px;
+      margin: 0 15px;
       text-decoration: none;
       color: #1f3a5f;
       font-weight: bold;
@@ -45,21 +77,21 @@
       padding: 30px;
       border-top: 3px solid #b22222;
     }
-    
-    .logo {
-       width: 120px;
-       height: auto;
-       display: block;
-       margin: 0 auto 10px;
-    }
   </style>
 </head>
 
 <body>
 
+  <!-- ✅ NEW HEADER STRUCTURE -->
   <header>
-    <img src="logo.jpg" alt="SOVDEPA Logo" class="logo">
-    <h2>Society of Veteran Disability Examiner PAs</h2>
+    <div class="header-top">
+      <img src="logo.jpg" alt="SOVDEPA Logo" class="logo">
+      <div class="title">
+        <h1>Society of</h1>
+        <h2>VETERAN DISABILITY<br>EXAMINER PAs</h2>
+      </div>
+    </div>
+
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
