@@ -20,6 +20,14 @@
       border-bottom: 3px solid #1f3a5f;
     }
 
+    /* ✅ HAMBURGER MENU */
+    .menu-toggle {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
     nav {
       margin-top: 0;
     }
@@ -53,7 +61,7 @@
       text-align: left;
     }
 
-    /* ✅ SECTION CARDS */
+    /* ✅ CARDS */
     .card {
       background: white;
       padding: 25px;
@@ -109,6 +117,19 @@
     /* ✅ MOBILE RESPONSIVE */
     @media (max-width: 600px) {
 
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
       nav a {
         display: block;
         margin: 10px 0;
@@ -117,11 +138,11 @@
 
       .logo-large {
         width: 180px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
 
       header {
-        padding: 25px 15px;
+        padding: 20px 15px;
       }
 
       .main {
@@ -146,7 +167,10 @@
   <header>
     <img src="logo.jpg" alt="SOVDEPA Logo" class="logo-large">
 
-    <nav>
+    <!-- ✅ Hamburger Menu -->
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <nav id="menu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="news.html">News</a>
@@ -185,6 +209,14 @@
   <div class="footer">
     <p>© SOVDEPA</p>
   </div>
+
+  <!-- ✅ MENU SCRIPT -->
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      menu.classList.toggle("show");
+    }
+  </script>
 
 </body>
 </html>
