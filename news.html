@@ -21,14 +21,13 @@
       position: relative;
     }
 
-    /* ✅ LOGO */
     .logo-large {
       width: 220px;
       display: block;
       margin: 0 auto 5px;
+      height: auto;
     }
 
-    /* ✅ NAVIGATION */
     nav {
       margin-top: 0;
     }
@@ -51,7 +50,6 @@
       padding-bottom: 3px;
     }
 
-    /* ✅ HAMBURGER BUTTON */
     .menu-toggle {
       display: none;
       background: none;
@@ -65,7 +63,6 @@
       padding: 0;
     }
 
-    /* ✅ MAIN CONTENT */
     .main {
       background-color: #d2c59a;
       padding: 30px 20px;
@@ -87,7 +84,12 @@
       font-size: 1.5em;
     }
 
-    /* ✅ FOOTER */
+    h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.5em;
+    }
+
     .footer {
       background-color: #ffffff;
       padding: 10px 20px;
@@ -113,7 +115,6 @@
       color: #b22222;
     }
 
-    /* ✅ MOBILE MENU */
     @media (max-width: 600px) {
 
       .menu-toggle {
@@ -122,27 +123,21 @@
 
       nav {
         display: none;
-        flex-direction: column;
-        background-color: white;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        border-top: 1px solid #ddd;
+      }
+
+      nav.show {
+        display: block;
       }
 
       nav a {
         display: block;
-        margin: 15px 0;
+        margin: 10px 0;
         font-size: 16px;
-      }
-
-      nav.show {
-        display: flex;
       }
 
       .logo-large {
         width: 180px;
+        margin-bottom: 20px;
       }
 
       header {
@@ -170,10 +165,9 @@
   <header>
     <img src="logo.jpg" alt="SOVDEPA Logo" class="logo-large">
 
-    <!-- ✅ HAMBURGER ICON -->
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-    <nav id="nav-menu">
+    <nav id="menu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="news.html" class="active">News</a>
@@ -195,8 +189,8 @@
       <h2>SOVDEPA YouTube Channel</h2>
 
       <p>
-        Past SOVDEPA meetings are now available to view on 
-        <a href="https://www.youtube.com" target="_blank">YouTube</a>. 
+        Past SOVDEPA meetings are now available to view on
+        <a href="https://www.youtube.com" target="_blank">YouTube</a>.
         These videos are eligible for AAPA Category 2 CME credit. Please subscribe to receive updates when new videos are posted.
       </p>
 
@@ -207,10 +201,9 @@
     <p>© SOVDEPA</p>
   </div>
 
-  <!-- ✅ MENU SCRIPT -->
   <script>
     function toggleMenu() {
-      var menu = document.getElementById("nav-menu");
+      var menu = document.getElementById("menu");
       menu.classList.toggle("show");
     }
   </script>
