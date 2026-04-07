@@ -18,6 +18,21 @@
       background-color: #ffffff;
       padding: 20px 20px 10px;
       border-bottom: 3px solid #1f3a5f;
+      position: relative;
+    }
+
+    /* ✅ HAMBURGER BUTTON (TOP RIGHT) */
+    .menu-toggle {
+      display: none;
+      background: none;
+      color: #1f3a5f;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 0;
     }
 
     nav {
@@ -57,7 +72,6 @@
       text-align: left;
     }
 
-    /* ✅ MATCH NEWS PAGE HEADINGS */
     h1, h2 {
       margin-top: 0;
       margin-bottom: 10px;
@@ -91,12 +105,30 @@
       margin: 0 auto 5px;
     }
 
-    /* ✅ MOBILE RESPONSIVE DESIGN */
+    /* ✅ MOBILE MENU */
     @media (max-width: 600px) {
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        border-top: 1px solid #ddd;
+      }
+
+      nav.show {
+        display: block;
+      }
 
       nav a {
         display: block;
-        margin: 10px 0;
+        margin: 12px 0;
         font-size: 16px;
       }
 
@@ -131,7 +163,10 @@
   <header>
     <img src="logo.jpg" alt="SOVDEPA Logo" class="logo-large">
 
-    <nav>
+    <!-- ✅ HAMBURGER ICON -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav id="menu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="news.html">News</a>
@@ -184,6 +219,14 @@
   <div class="footer">
     <p>© SOVDEPA</p>
   </div>
+
+  <!-- ✅ MENU SCRIPT -->
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      menu.classList.toggle("show");
+    }
+  </script>
 
 </body>
 </html>
