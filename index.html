@@ -47,6 +47,18 @@
       padding-bottom: 3px;
     }
 
+    /* ✅ MENU BUTTON */
+    .menu-toggle {
+      display: none;
+      background-color: #1f3a5f;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 16px;
+      margin: 10px auto;
+      cursor: pointer;
+    }
+
     .main {
       background-color: #d2c59a;
       padding: 30px 20px;
@@ -74,13 +86,13 @@
     }
 
     .footer h3 {
-        margin: 0 0 5px 0;  
-        font-size: 16px;     
+      margin: 0 0 5px 0;  
+      font-size: 16px;     
     }
 
     .footer p {
-        margin: 3px 0; 
-        font-size: 13px;
+      margin: 3px 0; 
+      font-size: 13px;
     }
     
     .footer a {
@@ -95,41 +107,55 @@
     }
     
     .logo-large {
-       width: 220px;
-       height: auto;
-       display: block;
-       margin: 0 auto 5px;
+      width: 220px;
+      height: auto;
+      display: block;
+      margin: 0 auto 5px;
     }
+
     /* ✅ MOBILE RESPONSIVE DESIGN */
-@media (max-width: 600px) {
+    @media (max-width: 600px) {
 
-  nav a {
-    display: block;
-    margin: 10px 0;
-    font-size: 16px;
-  }
+      .menu-toggle {
+        display: block;
+      }
 
-  .logo-large {
-    width: 180px;
-    margin-bottom: 20px;
-  }
+      nav {
+        display: none;
+      }
 
-  header {
-    padding: 25px 15px;
-  }
+      nav.show {
+        display: block;
+      }
 
-  .main {
-    padding: 30px 15px;
-  }
+      nav a {
+        display: block;
+        margin: 10px 0;
+        font-size: 16px;
+      }
 
-  .content {
-    padding: 20px;
-  }
+      .logo-large {
+        width: 180px;
+        margin-bottom: 20px;
+      }
 
-  .content p {
-    font-size: 16px;
-  }
-}
+      header {
+        padding: 25px 15px;
+      }
+
+      .main {
+        padding: 30px 15px;
+      }
+
+      .content {
+        padding: 20px;
+      }
+
+      .content p {
+        font-size: 16px;
+      }
+    }
+
   </style>
 </head>
 
@@ -138,7 +164,10 @@
   <header>
     <img src="logo.jpg" alt="SOVDEPA Logo" class="logo-large">
 
-    <nav>
+    <!-- ✅ MENU BUTTON -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+
+    <nav id="menu">
       <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
       <a href="news.html">News</a>
@@ -158,7 +187,7 @@
         The American Academy of PAs (AAPA) recognized SOVDEPA as a special interest group in 2023. SOVDEPA offers educational resources and networking at no charge. With current and projected shortages of Veteran medical disability examiners, SOVDEPA will continue to advocate for PAs in this field.
       </p>
 
-      <p style="font-size: 12px; ; margin-bottom: 5px; color: #555;">
+      <p style="font-size: 12px; margin-bottom: 5px; color: #555;">
         *SOVDEPA is run entirely by volunteers with no budget. SOVDEPA does not accept or distribute funds.<br>
         SOVDEPA does not handle job placement, employment matters, or pay questions, and does not respond to solicitations.
       </p>
@@ -179,6 +208,14 @@
       <a href="https://www.linkedin.com" target="_blank">View Profile</a>
     </p>
   </div>
+
+  <!-- ✅ JAVASCRIPT FOR MENU -->
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      menu.classList.toggle("show");
+    }
+  </script>
 
 </body>
 </html>
