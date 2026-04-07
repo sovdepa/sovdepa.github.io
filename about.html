@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -23,7 +22,6 @@
 
     nav {
       margin-top: 0;
-      margin-bottom: 10px;
     }
 
     nav a {
@@ -49,26 +47,33 @@
       padding: 30px 20px;
     }
 
+    /* ✅ WHITE CONTENT BOX (MATCHES OTHER PAGES) */
     .content {
       max-width: 900px;
       margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       text-align: left;
     }
 
     h1 {
       margin-top: 0;
+      margin-bottom: 10px;
     }
-    
+
+    /* ✅ MEMBER LAYOUT */
     .member {
       display: flex;
-      align-items: center;
+      align-items: center; /* centers image with text */
       margin-bottom: 40px;
     }
 
     .member h3 {
       margin-top: 0;
     }
-    
+
     .member img {
       width: 120px;
       height: auto;
@@ -86,12 +91,12 @@
     .footer p {
       margin: 5px 0;
     }
-    
+
     .logo-large {
-       width: 220px;
-       height: auto;
-       display: block;
-       margin: 0 auto 5px;
+      width: 220px;
+      height: auto;
+      display: block;
+      margin: 0 auto 5px;
     }
 
     /* ✅ MOBILE RESPONSIVE DESIGN */
@@ -117,7 +122,7 @@
       }
 
       .content {
-        padding: 10px;
+        padding: 20px;
       }
 
       .member {
@@ -132,7 +137,6 @@
     }
 
   </style>
-
 </head>
 
 <body>
@@ -140,57 +144,55 @@
   <header>
     <img src="logo.jpg" alt="SOVDEPA Logo" class="logo-large">
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html" class="active">About</a>
-  <a href="news.html">News</a>
-  <a href="presentations.html">Presentations</a>
-  <a href="resources.html">Resources</a>
-  <a href="faq.html">FAQs</a>
-</nav>
-
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="news.html">News</a>
+      <a href="presentations.html">Presentations</a>
+      <a href="resources.html">Resources</a>
+      <a href="faq.html">FAQs</a>
+    </nav>
   </header>
 
   <div class="main">
     <div class="content">
 
-  <h1>Board Members</h1>
-  <p>
-    The following members comprise the board for the Society of Veteran Disability Examiner PAs. Board members are disability examiner practicing PAs.
-  </p>
-
-  <div class="member">
-    <img src="chelsea.jpg" alt="Chelsea Raby">
-    <div>
-      <h3>Chelsea Raby, PA-C</h3>
+      <h1>Board Members</h1>
       <p>
-        Chelsea Raby is a disability examiner PA, co-founder and board member of SOVDEPA. She graduated from the University of Alabama at Birmingham Physician Assistant Program and has worked clinically in Emergency Medicine, Neurosurgery, and Urgent Care. As the spouse of a combat Veteran, she understands the importance of providing exceptional care to our service members and Veterans, while also advocating for PAs to pursue a career in this exciting, rapidly expanding field.
+        The following members comprise the board for the Society of Veteran Disability Examiner PAs. Board members are disability examiner practicing PAs.
       </p>
+
+      <div class="member">
+        <img src="chelsea.jpg" alt="Chelsea Raby">
+        <div>
+          <h3>Chelsea Raby, PA-C</h3>
+          <p>
+            Chelsea Raby is a disability examiner PA, co-founder and board member of SOVDEPA. She graduated from the University of Alabama at Birmingham Physician Assistant Program and has worked clinically in Emergency Medicine, Neurosurgery, and Urgent Care. As the spouse of a combat Veteran, she understands the importance of providing exceptional care to our service members and Veterans, while also advocating for PAs to pursue a career in this exciting, rapidly expanding field.
+          </p>
+        </div>
+      </div>
+
+      <div class="member">
+        <img src="brandon.jpg" alt="Brandon Beattie">
+        <div>
+          <h3>Brandon Beattie, PA-C</h3>
+          <p>
+            Brandon Beattie is a disability examiner PA, co-founder and board member of SOVDEPA. He is also an assistant professor and the Director of Didactic Education, where he oversees the didactic phase of training at the George Washington University PA Program. He graduated from the Yale University Physician Assistant Program with honors and has worked clinically in Neurology, Urgent Care, and outpatient Interventional Radiology. Before becoming a PA, he served honorably as a decorated U.S. Army Medic with multiple overseas tours.
+          </p>
+        </div>
+      </div>
+
+      <div class="member">
+        <img src="kristen.jpg" alt="Kristen Scheckel">
+        <div>
+          <h3>Kristen Scheckel, PA-C</h3>
+          <p>
+            Kristen Scheckel is a disability examiner PA, co-founder and board member of SOVDEPA. Prior to entering this field, Kristen worked in Internal Medicine and Endocrinology for 13 years. She loves the variety and challenge involved in conducting Veteran disability exams. She is passionate about providing high quality care to Veterans receiving disability medical examinations and strives to help PAs interested in this unique field.
+          </p>
+        </div>
+      </div>
+
     </div>
-  </div>
-
-  <div class="member">
-    <img src="brandon.jpg" alt="Brandon Beattie">
-    <div>
-      <h3>Brandon Beattie, PA-C</h3>
-      <p>
-        Brandon Beattie is a disability examiner PA, co-founder and board member of SOVDEPA. He is also an assistant professor and the Director of Didactic Education, where he oversees the didactic phase of training at the George Washington University PA Program. He graduated from the Yale University Physician Assistant Program with honors and has worked clinically in Neurology, Urgent Care, and outpatient Interventional Radiology. Before becoming a PA, he served honorably as a decorated U.S. Army Medic with multiple overseas tours.
-      </p>
-    </div>
-  </div>
-
-  <div class="member">
-    <img src="kristen.jpg" alt="Kristen Scheckel">
-    <div>
-      <h3>Kristen Scheckel, PA-C</h3>
-      <p>
-        Kristen Scheckel is a disability examiner PA, co-founder and board member of SOVDEPA. Prior to entering this field, Kristen worked in Internal Medicine and Endocrinology for 13 years. She loves the variety and challenge involved in conducting Veteran disability exams. She is passionate about providing high quality care to Veterans receiving disability medical examinations and strives to help PAs interested in this unique field.
-      </p>
-    </div>
-  </div>
-
-</div>
-
   </div>
 
   <div class="footer">
