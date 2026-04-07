@@ -9,40 +9,59 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
+      text-align: center;
       line-height: 1.6;
+      background-color: #ffffff;
     }
 
     header {
       background-color: #f4f4f4;
-      padding: 20px;
-      text-align: center;
+      padding: 20px 20px 10px;
       border-bottom: 3px solid #1f3a5f;
     }
 
+    nav {
+      margin-top: 0;
+    }
+
     nav a {
-      margin: 0 10px;
+      margin: 0 12px;
       text-decoration: none;
       color: #1f3a5f;
       font-weight: bold;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    nav a.active {
+      color: #b22222;
+      border-bottom: 2px solid #b22222;
+      padding-bottom: 3px;
     }
 
     .main {
       background-color: #d2c59a;
-      padding: 40px 20px;
+      padding: 30px 20px;
     }
 
     .content {
       max-width: 900px;
       margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: left;
     }
 
-    h1 {
+    /* ✅ MATCHED HEADINGS TO NEWS PAGE */
+    h1, h2 {
       margin-top: 0;
       margin-bottom: 10px;
-    }
-    
-    h1, h2 {
-      color: #2c3e50;
+      font-size: 1.5em;
     }
 
     a {
@@ -57,18 +76,70 @@
     .section {
       margin-bottom: 30px;
     }
+
+    .footer {
+      background-color: #f4f4f4;
+      padding: 10px 20px;
+      text-align: center;
+      border-top: 3px solid #b22222;
+    }
+
+    .footer p {
+      margin: 5px 0;
+    }
+
+    .logo-large {
+      width: 220px;
+      height: auto;
+      display: block;
+      margin: 0 auto 5px;
+    }
+
+    /* ✅ MOBILE RESPONSIVE DESIGN */
+    @media (max-width: 600px) {
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+        font-size: 16px;
+      }
+
+      .logo-large {
+        width: 180px;
+        margin-bottom: 20px;
+      }
+
+      header {
+        padding: 25px 15px;
+      }
+
+      .main {
+        padding: 30px 15px;
+      }
+
+      .content {
+        padding: 20px;
+      }
+
+      .content p {
+        font-size: 16px;
+      }
+    }
+
   </style>
+
 </head>
 
 <body>
 
   <header>
-    <h2>Society of Veteran Disability Examiner PAs</h2>
+    <img src="logo.jpg" alt="SOVDEPA Logo" class="logo-large">
+
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="news.html">News</a>
-      <a href="presentations.html">Presentations</a>
+      <a href="presentations.html" class="active">Presentations</a>
       <a href="resources.html">Resources</a>
       <a href="faq.html">FAQs</a>
     </nav>
@@ -96,6 +167,10 @@
       </div>
 
     </div>
+  </div>
+
+  <div class="footer">
+    <p>© SOVDEPA</p>
   </div>
 
 </body>
