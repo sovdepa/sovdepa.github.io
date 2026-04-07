@@ -9,31 +9,59 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
+      text-align: center;
       line-height: 1.6;
+      background-color: #ffffff;
     }
 
     header {
       background-color: #f4f4f4;
-      padding: 20px;
-      text-align: center;
+      padding: 20px 20px 10px;
       border-bottom: 3px solid #1f3a5f;
     }
 
+    nav {
+      margin-top: 0;
+    }
+
     nav a {
-      margin: 0 10px;
+      margin: 0 12px;
       text-decoration: none;
       color: #1f3a5f;
       font-weight: bold;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    nav a.active {
+      color: #b22222;
+      border-bottom: 2px solid #b22222;
+      padding-bottom: 3px;
+    }
+
+    .main {
+      background-color: #d2c59a;
+      padding: 30px 20px;
     }
 
     .content {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: left;
     }
 
+    /* ✅ MATCH NEWS PAGE HEADINGS */
     h1, h2 {
-      color: #2c3e50;
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.5em;
     }
 
     .question {
@@ -44,59 +72,117 @@
     .answer {
       margin-bottom: 15px;
     }
+
+    .footer {
+      background-color: #f4f4f4;
+      padding: 10px 20px;
+      text-align: center;
+      border-top: 3px solid #b22222;
+    }
+
+    .footer p {
+      margin: 5px 0;
+    }
+
+    .logo-large {
+      width: 220px;
+      height: auto;
+      display: block;
+      margin: 0 auto 5px;
+    }
+
+    /* ✅ MOBILE RESPONSIVE DESIGN */
+    @media (max-width: 600px) {
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+        font-size: 16px;
+      }
+
+      .logo-large {
+        width: 180px;
+        margin-bottom: 20px;
+      }
+
+      header {
+        padding: 25px 15px;
+      }
+
+      .main {
+        padding: 30px 15px;
+      }
+
+      .content {
+        padding: 20px;
+      }
+
+      .content p, .answer, li {
+        font-size: 16px;
+      }
+    }
+
   </style>
+
 </head>
 
 <body>
 
   <header>
-    <h2>Society of Veteran Disability Examiner PAs</h2>
+    <img src="logo.jpg" alt="SOVDEPA Logo" class="logo-large">
+
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="news.html">News</a>
       <a href="presentations.html">Presentations</a>
       <a href="resources.html">Resources</a>
-      <a href="faq.html">FAQs</a>
+      <a href="faq.html" class="active">FAQs</a>
     </nav>
   </header>
 
-  <div class="content">
+  <div class="main">
+    <div class="content">
 
-    <h1>Frequently Asked Questions</h1>
+      <h1>Frequently Asked Questions</h1>
 
-    <div class="question">What is a typical day for a Veteran Disability Examiner PA?</div>
-    <div class="answer">
-      The role involves evaluating Veterans who have filed disability claims. This includes reviewing medical records, taking a history, performing exams, reviewing labs/imaging, and submitting reports to the Veterans Benefits Administration (VBA).
+      <div class="question">What is a typical day for a Veteran Disability Examiner PA?</div>
+      <div class="answer">
+        The role involves evaluating Veterans who have filed disability claims. This includes reviewing medical records, taking a history, performing exams, reviewing labs/imaging, and submitting reports to the Veterans Benefits Administration (VBA).
+      </div>
+
+      <div class="question">What are the steps in the Veteran disability claim process?</div>
+      <div class="answer">
+        <ol>
+          <li>The Veteran files a claim with the VBA.</li>
+          <li>The VBA reviews the claim and may request an exam.</li>
+          <li>The examiner reviews records and performs the exam.</li>
+          <li>The examiner submits findings to the VBA.</li>
+          <li>The VBA issues a decision to the Veteran.</li>
+        </ol>
+      </div>
+
+      <div class="question">What types of disability exams are there?</div>
+      <div class="answer">
+        <ul>
+          <li><strong>SHA:</strong> Transition exam for service members</li>
+          <li><strong>General Medical:</strong> Within 1 year after service</li>
+          <li><strong>Focused:</strong> Specific conditions</li>
+          <li><strong>Gulf War:</strong> For qualifying deployments</li>
+          <li><strong>Independent Medical Opinions:</strong> Cause/aggravation of conditions</li>
+        </ul>
+      </div>
+
+      <div class="question">What happens after the exam?</div>
+      <div class="answer">
+        These exams are one-time evaluations. Examiners may recommend follow-up, but ongoing care is handled through VA providers.
+      </div>
+
     </div>
+  </div>
 
-    <div class="question">What are the steps in the Veteran disability claim process?</div>
-    <div class="answer">
-      <ol>
-        <li>The Veteran files a claim with the VBA.</li>
-        <li>The VBA reviews the claim and may request an exam.</li>
-        <li>The examiner reviews records and performs the exam.</li>
-        <li>The examiner submits findings to the VBA.</li>
-        <li>The VBA issues a decision to the Veteran.</li>
-      </ol>
-    </div>
-
-    <div class="question">What types of disability exams are there?</div>
-    <div class="answer">
-      <ul>
-        <li><strong>SHA:</strong> Transition exam for service members</li>
-        <li><strong>General Medical:</strong> Within 1 year after service</li>
-        <li><strong>Focused:</strong> Specific conditions</li>
-        <li><strong>Gulf War:</strong> For qualifying deployments</li>
-        <li><strong>Independent Medical Opinions:</strong> Cause/aggravation of conditions</li>
-      </ul>
-    </div>
-
-    <div class="question">What happens after the exam?</div>
-    <div class="answer">
-      These exams are one-time evaluations. Examiners may recommend follow-up, but ongoing care is handled through VA providers.
-    </div>
-
+  <div class="footer">
+    <p>© SOVDEPA</p>
   </div>
 
 </body>
