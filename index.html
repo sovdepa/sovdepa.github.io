@@ -6,12 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
       text-align: center;
       line-height: 1.6;
       background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
@@ -19,11 +25,6 @@
       padding: 20px 20px 10px;
       border-bottom: 3px solid #1f3a5f;
       position: relative;
-    }
-
-    h2 {
-      margin: 10px 0 15px;
-      color: #1f3a5f;
     }
 
     nav {
@@ -48,7 +49,6 @@
       padding-bottom: 3px;
     }
 
-    /* ✅ MENU BUTTON */
     .menu-toggle {
       display: none;
       background: none;
@@ -64,14 +64,15 @@
 
     .main {
       background-color: #d2c59a;
-      padding: 30px 20px 20px;
+      padding: 30px 20px 15px;
+      flex: 1;
     }
 
     .content {
       max-width: 800px;
       margin: auto;
       background: white;
-      padding: 30px 20px 20px;
+      padding: 30px 30px 15px;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       text-align: left;
@@ -83,18 +84,18 @@
 
     .footer {
       background-color: #ffffff;
-      padding: 6px 20px;  
+      padding: 6px 20px;
       border-top: 3px solid #b22222;
       text-align: center;
     }
 
     .footer h3 {
-      margin: 0 0 4px 0;  
-      font-size: 15px;     
+      margin: 0 0 4px 0;
+      font-size: 15px;
     }
 
     .footer p {
-      margin: 2px 0; 
+      margin: 2px 0;
       font-size: 13px;
     }
     
@@ -116,7 +117,6 @@
       margin: 0 auto 5px;
     }
 
-    /* ✅ MOBILE RESPONSIVE DESIGN */
     @media (max-width: 600px) {
 
       .menu-toggle {
@@ -125,6 +125,12 @@
 
       nav {
         display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        border-top: 1px solid #ddd;
       }
 
       nav.show {
@@ -133,7 +139,7 @@
 
       nav a {
         display: block;
-        margin: 10px 0;
+        margin: 12px 0;
         font-size: 16px;
       }
 
@@ -147,11 +153,11 @@
       }
 
       .main {
-        padding: 30px 15px;
+        padding: 30px 15px 15px;
       }
 
       .content {
-        padding: 20px;
+        padding: 20px 20px 15px;
       }
 
       .content p {
@@ -167,8 +173,7 @@
   <header>
     <img src="logo.jpg" alt="SOVDEPA Logo" class="logo-large">
 
-    <!-- ✅ MENU BUTTON -->
-    <button class="menu-toggle" onclick="toggleMenu()">☰ </button>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
     <nav id="menu">
       <a href="index.html" class="active">Home</a>
@@ -190,7 +195,7 @@
         The American Academy of PAs (AAPA) recognized SOVDEPA as a special interest group in 2023. SOVDEPA offers educational resources and networking at no charge. With current and projected shortages of Veteran medical disability examiners, SOVDEPA will continue to advocate for PAs in this field.
       </p>
 
-      <p style="font-size: 12px; margin-bottom: 5px; color: #555;">
+      <p style="font-size: 12px; margin-bottom: 0; color: #555;">
         *SOVDEPA is run entirely by volunteers with no budget. SOVDEPA does not accept or distribute funds.<br>
         SOVDEPA does not handle job placement, employment matters, or pay questions, and does not respond to solicitations.
       </p>
@@ -202,17 +207,16 @@
     <p>Email: SOVDEPA2023@gmail.com</p>
 
     <p>
-      YouTube: 
-      <a href="https://www.youtube.com/@SOVDEPA" target="_blank">Visit Channel</a>
+      YouTube:
+      <a href="https://www.youtube.com" target="_blank">Visit Channel</a>
     </p>
 
     <p>
-      LinkedIn: 
-      <a href=" https://www.linkedin.com/company/sovdepa/posts/" target="_blank">View Profile</a>
+      LinkedIn:
+      <a href="https://www.linkedin.com" target="_blank">View Profile</a>
     </p>
   </div>
 
-  <!-- ✅ JAVASCRIPT FOR MENU -->
   <script>
     function toggleMenu() {
       var menu = document.getElementById("menu");
