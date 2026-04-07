@@ -6,12 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    html, body {
+      min-height: 100%;
+      margin: 0;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
       text-align: center;
       line-height: 1.6;
       background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
@@ -19,6 +26,13 @@
       padding: 20px 20px 10px;
       border-bottom: 3px solid #1f3a5f;
       position: relative;
+    }
+
+    .logo-large {
+      width: 220px;
+      height: auto;
+      display: block;
+      margin: 0 auto 5px;
     }
 
     .menu-toggle {
@@ -58,17 +72,23 @@
 
     .main {
       background-color: #d2c59a;
-      padding: 30px 20px 20px;
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
     }
 
     .content {
       max-width: 900px;
-      margin: auto;
+      width: 100%;
+      margin: 0 auto;
       background: white;
-      padding: 30px 30px 20px;
+      padding: 30px 30px 15px;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       text-align: left;
+      min-height: 300px;
     }
 
     h1, h2 {
@@ -96,21 +116,14 @@
 
     .footer {
       background-color: #ffffff;
-      padding: 8px 20px;
-      text-align: center;
+      padding: 6px 20px;
       border-top: 3px solid #b22222;
+      text-align: center;
     }
 
     .footer p {
-      margin: 3px 0;
+      margin: 2px 0;
       font-size: 13px;
-    }
-
-    .logo-large {
-      width: 220px;
-      height: auto;
-      display: block;
-      margin: 0 auto 5px;
     }
 
     @media (max-width: 600px) {
@@ -149,11 +162,12 @@
       }
 
       .main {
-        padding: 30px 15px 20px;
+        padding: 20px 15px;
       }
 
       .content {
         padding: 20px 20px 15px;
+        min-height: auto;
       }
 
       .content p {
@@ -188,17 +202,18 @@
       <h1>Past Presentations</h1>
 
       <div class="section">
-        <p><a href="https://youtu.be/6kaZ_hAnsLo?si=QBGGP2QeDAjbpCpU">Code of Federal Regulations: Pearls For Disability Examiner PAs</a> (November 2024)</p>
-        <p><a href="https://youtu.be/72YIzjVz55E?si=sF69qKma_1ei6k2T">Trauma-Informed Care Honoring Veterans: A Model For Us All</a> (September 2024)</p>
-        <p><a href="https://youtu.be/DqQ1VRsUJoo?si=gAEIDz0vIB48A3ej">Example Esophageal Disability Benefit Questionnaire</a> (July 2024)</p>
-        <p><a href="https://youtu.be/G6QpjMomWnY?si=AWBebe6mr4jOc_ql">Shoulder Examination Pearls</a> (April 2024)</p>
-        <p><a href="https://youtu.be/dmnnvcU45Sc?si=ogISFk0kiQyjEn3d">Insights For Disability Examiner PAs, Speaker: Shepard B. Stone</a> (March 2024)</p>
-        
+        <p><a href="https://youtu.be/6kaZ_hAnsLo?si=QBGGP2QeDAjbpCpU" target="_blank">Code of Federal Regulations: Pearls For Disability Examiner PAs</a> (November 2024)</p>
+        <p><a href="https://youtu.be/72YIzjVz55E?si=sF69qKma_1ei6k2T" target="_blank">Trauma-Informed Care Honoring Veterans: A Model For Us All</a> (September 2024)</p>
+        <p><a href="https://youtu.be/DqQ1VRsUJoo?si=gAEIDz0vIB48A3ej" target="_blank">Example Esophageal Disability Benefit Questionnaire</a> (July 2024)</p>
+        <p><a href="https://youtu.be/G6QpjMomWnY?si=AWBebe6mr4jOc_ql" target="_blank">Shoulder Examination Pearls</a> (April 2024)</p>
+        <p><a href="https://youtu.be/dmnnvcU45Sc?si=ogISFk0kiQyjEn3d" target="_blank">Insights For Disability Examiner PAs, Speaker: Shepard B. Stone</a> (March 2024)</p>
+      </div>
+
       <h2>Veterans Advocacy</h2>
 
       <div class="section">
-        <p><a href="#">"No, thank you" for your service</a></p>
-        <p><a href="#">Combat to Classroom</a></p>
+        <p><a href="#" target="_blank">"No, thank you" for your service</a></p>
+        <p><a href="#" target="_blank">Combat to Classroom</a></p>
       </div>
 
     </div>
