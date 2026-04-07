@@ -18,6 +18,20 @@
       background-color: #ffffff;
       padding: 20px 20px 10px;
       border-bottom: 3px solid #1f3a5f;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      color: #1f3a5f;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 0;
     }
 
     nav {
@@ -44,20 +58,19 @@
 
     .main {
       background-color: #d2c59a;
-      padding: 30px 20px;
+      padding: 30px 20px 20px;
     }
 
     .content {
       max-width: 900px;
       margin: auto;
       background: white;
-      padding: 30px;
+      padding: 30px 30px 20px;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       text-align: left;
     }
 
-    /* ✅ MATCHED HEADINGS TO NEWS PAGE */
     h1, h2 {
       margin-top: 0;
       margin-bottom: 10px;
@@ -74,18 +87,23 @@
     }
 
     .section {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
     }
 
     .footer {
       background-color: #ffffff;
-      padding: 10px 20px;
+      padding: 8px 20px;
       text-align: center;
       border-top: 3px solid #b22222;
     }
 
     .footer p {
-      margin: 5px 0;
+      margin: 3px 0;
+      font-size: 13px;
     }
 
     .logo-large {
@@ -95,12 +113,29 @@
       margin: 0 auto 5px;
     }
 
-    /* ✅ MOBILE RESPONSIVE DESIGN */
     @media (max-width: 600px) {
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        border-top: 1px solid #ddd;
+      }
+
+      nav.show {
+        display: block;
+      }
 
       nav a {
         display: block;
-        margin: 10px 0;
+        margin: 12px 0;
         font-size: 16px;
       }
 
@@ -114,11 +149,11 @@
       }
 
       .main {
-        padding: 30px 15px;
+        padding: 30px 15px 20px;
       }
 
       .content {
-        padding: 20px;
+        padding: 20px 20px 15px;
       }
 
       .content p {
@@ -135,7 +170,9 @@
   <header>
     <img src="logo.jpg" alt="SOVDEPA Logo" class="logo-large">
 
-    <nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav id="menu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="news.html">News</a>
@@ -172,6 +209,13 @@
   <div class="footer">
     <p>© SOVDEPA</p>
   </div>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      menu.classList.toggle("show");
+    }
+  </script>
 
 </body>
 </html>
