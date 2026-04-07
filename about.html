@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,66 +10,48 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
+      text-align: center;
       line-height: 1.6;
+      background-color: #ffffff;
     }
 
-    /* ✅ NEW HEADER STYLING */
     header {
       background-color: #f4f4f4;
-      border-bottom: 5px solid #1f3a5f;
-    }
-
-    .header-top {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .logo {
-      width: 100px;
-      height: auto;
-    }
-
-    .title h1 {
-      margin: 0;
-      font-size: 20px;
-      color: #b59b6a;
-      font-weight: normal;
-    }
-
-    .title h2 {
-      margin: 0;
-      font-size: 22px;
-      color: #1f3a5f;
+      padding: 40px 20px;
+      border-bottom: 3px solid #1f3a5f;
     }
 
     nav {
-      text-align: center;
-      padding: 10px 0;
-      border-top: 1px solid #ccc;
+      margin-top: 10px;
     }
 
     nav a {
-      margin: 0 15px;
+      margin: 0 12px;
       text-decoration: none;
       color: #1f3a5f;
       font-weight: bold;
+      font-size: 15px;
     }
 
     nav a:hover {
       text-decoration: underline;
     }
 
+    nav a.active {
+      color: #b22222;
+      border-bottom: 2px solid #b22222;
+      padding-bottom: 3px;
+    }
+
     .main {
       background-color: #d2c59a;
-      padding: 40px 20px;
+      padding: 60px 20px;
     }
 
     .content {
       max-width: 900px;
       margin: auto;
+      text-align: left;
     }
 
     .member {
@@ -90,70 +73,115 @@
       text-align: center;
       border-top: 3px solid #b22222;
     }
+    
+    .logo-large {
+       width: 220px;
+       height: auto;
+       display: block;
+       margin: 0 auto 15px;
+    }
+
+    /* ✅ MOBILE RESPONSIVE DESIGN */
+    @media (max-width: 600px) {
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+        font-size: 16px;
+      }
+
+      .logo-large {
+        width: 180px;
+        margin-bottom: 20px;
+      }
+
+      header {
+        padding: 25px 15px;
+      }
+
+      .main {
+        padding: 30px 15px;
+      }
+
+      .content {
+        padding: 10px;
+      }
+
+      .member {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .member img {
+        margin: 0 0 15px 0;
+      }
+    }
+
   </style>
+
 </head>
 
 <body>
 
-  <!-- ✅ NEW HEADER STRUCTURE -->
   <header>
-    <div class="header-top">
-      <img src="logo.jpg" alt="SOVDEPA Logo" class="logo">
-      <div class="title">
-        <h1>Society of</h1>
-        <h2>VETERAN DISABILITY<br>EXAMINER PAs</h2>
-      </div>
-    </div>
+    <img src="logo.jpg" alt="SOVDEPA Logo" class="logo-large">
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="news.html">News</a>
-      <a href="presentations.html">Presentations</a>
-      <a href="resources.html">Resources</a>
-      <a href="faq.html">FAQs</a>
-    </nav>
+```
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html" class="active">About</a>
+  <a href="news.html">News</a>
+  <a href="presentations.html">Presentations</a>
+  <a href="resources.html">Resources</a>
+  <a href="faq.html">FAQs</a>
+</nav>
+```
+
   </header>
 
   <div class="main">
     <div class="content">
 
-      <h1>Board Members</h1>
+```
+  <h1>Board Members</h1>
+  <p>
+    The following members comprise the board for the Society of Veteran Disability Examiner PAs. Board members are disability examiner practicing PAs.
+  </p>
+
+  <div class="member">
+    <img src="chelsea.jpg" alt="Chelsea Raby">
+    <div>
+      <h3>Chelsea Raby, PA-C</h3>
       <p>
-        The following members comprise the board for the Society of Veteran Disability Examiner PAs. Board members are disability examiner practicing PAs.
+        Chelsea Raby is a disability examiner PA, co-founder and board member of SOVDEPA. She graduated from the University of Alabama at Birmingham Physician Assistant Program and has worked clinically in Emergency Medicine, Neurosurgery, and Urgent Care. As the spouse of a combat Veteran, she understands the importance of providing exceptional care to our service members and Veterans, while also advocating for PAs to pursue a career in this exciting, rapidly expanding field.
       </p>
-
-      <div class="member">
-        <img src="chelsea.jpg" alt="Chelsea Raby">
-        <div>
-          <h3>Chelsea Raby, PA-C</h3>
-          <p>
-            Chelsea Raby is a disability examiner PA, co-founder and board member of SOVDEPA. She graduated from the University of Alabama at Birmingham Physician Assistant Program and has worked clinically in Emergency Medicine, Neurosurgery, and Urgent Care. As the spouse of a combat Veteran, she understands the importance of providing exceptional care to our service members and Veterans, while also advocating for PAs to pursue a career in this exciting, rapidly expanding field.
-          </p>
-        </div>
-      </div>
-
-      <div class="member">
-        <img src="brandon.jpg" alt="Brandon Beattie">
-        <div>
-          <h3>Brandon Beattie, PA-C</h3>
-          <p>
-            Brandon Beattie is a disability examiner PA, co-founder and board member of SOVDEPA. He is also an assistant professor and the Director of Didactic Education, where he oversees the didactic phase of training at the George Washington University PA Program. He graduated from the Yale University Physician Assistant Program with honors and has worked clinically in Neurology, Urgent Care, and outpatient Interventional Radiology. Before becoming a PA, he served honorably as a decorated U.S. Army Medic with multiple overseas tours.
-          </p>
-        </div>
-      </div>
-
-      <div class="member">
-        <img src="kristen.jpg" alt="Kristen Scheckel">
-        <div>
-          <h3>Kristen Scheckel, PA-C</h3>
-          <p>
-            Kristen Scheckel is a disability examiner PA, co-founder and board member of SOVDEPA. Prior to entering this field, Kristen worked in Internal Medicine and Endocrinology for 13 years. She loves the variety and challenge involved in conducting Veteran disability exams. She is passionate about providing high quality care to Veterans receiving disability medical examinations and strives to help PAs interested in this unique field.
-          </p>
-        </div>
-      </div>
-
     </div>
+  </div>
+
+  <div class="member">
+    <img src="brandon.jpg" alt="Brandon Beattie">
+    <div>
+      <h3>Brandon Beattie, PA-C</h3>
+      <p>
+        Brandon Beattie is a disability examiner PA, co-founder and board member of SOVDEPA. He is also an assistant professor and the Director of Didactic Education, where he oversees the didactic phase of training at the George Washington University PA Program. He graduated from the Yale University Physician Assistant Program with honors and has worked clinically in Neurology, Urgent Care, and outpatient Interventional Radiology. Before becoming a PA, he served honorably as a decorated U.S. Army Medic with multiple overseas tours.
+      </p>
+    </div>
+  </div>
+
+  <div class="member">
+    <img src="kristen.jpg" alt="Kristen Scheckel">
+    <div>
+      <h3>Kristen Scheckel, PA-C</h3>
+      <p>
+        Kristen Scheckel is a disability examiner PA, co-founder and board member of SOVDEPA. Prior to entering this field, Kristen worked in Internal Medicine and Endocrinology for 13 years. She loves the variety and challenge involved in conducting Veteran disability exams. She is passionate about providing high quality care to Veterans receiving disability medical examinations and strives to help PAs interested in this unique field.
+      </p>
+    </div>
+  </div>
+
+</div>
+```
+
   </div>
 
   <div class="footer">
