@@ -21,6 +21,19 @@
       position: relative;
     }
 
+    .menu-toggle {
+      display: none;
+      background: none;
+      color: #1f3a5f;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 0;
+    }
+
     nav {
       margin-top: 0;
     }
@@ -48,7 +61,6 @@
       padding: 30px 20px;
     }
 
-    /* ✅ WHITE CONTENT BOX (MATCHES OTHER PAGES) */
     .content {
       max-width: 900px;
       margin: auto;
@@ -62,12 +74,12 @@
     h1 {
       margin-top: 0;
       margin-bottom: 10px;
+      font-size: 1.5em;
     }
 
-    /* ✅ MEMBER LAYOUT */
     .member {
       display: flex;
-      align-items: center; /* centers image with text */
+      align-items: center;
       margin-bottom: 40px;
     }
 
@@ -91,6 +103,7 @@
 
     .footer p {
       margin: 5px 0;
+      font-size: 13px;
     }
 
     .logo-large {
@@ -100,12 +113,29 @@
       margin: 0 auto 5px;
     }
 
-    /* ✅ MOBILE RESPONSIVE DESIGN */
     @media (max-width: 600px) {
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        border-top: 1px solid #ddd;
+      }
+
+      nav.show {
+        display: block;
+      }
 
       nav a {
         display: block;
-        margin: 10px 0;
+        margin: 12px 0;
         font-size: 16px;
       }
 
@@ -145,7 +175,9 @@
   <header>
     <img src="logo.jpg" alt="SOVDEPA Logo" class="logo-large">
 
-    <nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav id="menu">
       <a href="index.html">Home</a>
       <a href="about.html" class="active">About</a>
       <a href="news.html">News</a>
@@ -199,6 +231,13 @@
   <div class="footer">
     <p>© SOVDEPA</p>
   </div>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      menu.classList.toggle("show");
+    }
+  </script>
 
 </body>
 </html>
