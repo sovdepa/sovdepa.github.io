@@ -11,47 +11,76 @@
       margin: 0;
       text-align: center;
       line-height: 1.6;
+      background-color: #ffffff;
     }
 
     header {
       background-color: #f4f4f4;
-      padding: 20px;
+      padding: 25px 20px;
       border-bottom: 3px solid #1f3a5f;
     }
 
+    h2 {
+      margin: 10px 0 15px;
+      color: #1f3a5f;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
     nav a {
-      margin: 0 10px;
+      margin: 0 12px;
       text-decoration: none;
       color: #1f3a5f;
       font-weight: bold;
+      font-size: 15px;
     }
 
     nav a:hover {
       text-decoration: underline;
     }
 
-    /* ✅ ACTIVE PAGE HIGHLIGHT */
     nav a.active {
       color: #b22222;
       border-bottom: 2px solid #b22222;
       padding-bottom: 3px;
-      font-weight: bold;
     }
 
     .main {
       background-color: #d2c59a;
-      padding: 40px 20px;
+      padding: 60px 20px;
     }
 
     .content {
       max-width: 800px;
       margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    .content p {
+      margin-bottom: 20px;
     }
 
     .footer {
       background-color: #f4f4f4;
-      padding: 30px;
+      padding: 30px 20px;
       border-top: 3px solid #b22222;
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: #1f3a5f;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
     }
     
     .logo {
@@ -68,8 +97,8 @@
   <header>
     <img src="logo.jpg" alt="SOVDEPA Logo" class="logo">
     <h2>Society of Veteran Disability Examiner PAs</h2>
+
     <nav>
-      <!-- ✅ HOME is active on this page -->
       <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
       <a href="news.html">News</a>
@@ -86,12 +115,12 @@
       </p>
 
       <p>
-        The American Academy of PAs (AAPA) recognized SOVDEPA as a special interest group in 2023. SOVDEPA offers educational resources and networking at no charge. With the current and future projected shortages of Veteran medical disability examiners, SOVDEPA will continue to advocate for PAs in this field.
+        The American Academy of PAs (AAPA) recognized SOVDEPA as a special interest group in 2023. SOVDEPA offers educational resources and networking at no charge. With current and projected shortages of Veteran medical disability examiners, SOVDEPA will continue to advocate for PAs in this field.
       </p>
 
-      <p style="font-size: 12px;">
-        *SOVDEPA is run entirely by volunteers with no budget. SOVDEPA does not accept funds or distribute funds.<br>
-        SOVDEPA does not handle job placement, employment matters, or pay questions. SOVDEPA does not respond to solicitations of any type.
+      <p style="font-size: 12px; color: #555;">
+        *SOVDEPA is run entirely by volunteers with no budget. SOVDEPA does not accept or distribute funds.<br>
+        SOVDEPA does not handle job placement, employment matters, or pay questions, and does not respond to solicitations.
       </p>
     </div>
   </div>
@@ -99,10 +128,12 @@
   <div class="footer">
     <h3>Contact Us</h3>
     <p>Email: SOVDEPA@gmail.com</p>
+
     <p>
       YouTube: 
       <a href="https://www.youtube.com" target="_blank">Visit Channel</a>
     </p>
+
     <p>
       LinkedIn: 
       <a href="https://www.linkedin.com" target="_blank">View Profile</a>
